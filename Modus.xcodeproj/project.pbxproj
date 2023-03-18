@@ -55,8 +55,8 @@
 		31BB15B029C3FA9A00089F67 /* ModrinthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15A529C3FA9A00089F67 /* ModrinthService.swift */; };
 		31BB15B329C3FB7100089F67 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 31BB15B229C3FB7100089F67 /* Nuke */; };
 		31BB15B529C3FB7100089F67 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 31BB15B429C3FB7100089F67 /* NukeUI */; };
-		31BB15B729C3FC5000089F67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15B629C3FC5000089F67 /* ContentView.swift */; };
-		31BB15B929C3FC6B00089F67 /* ModusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15B829C3FC6B00089F67 /* ModusApp.swift */; };
+		31BB15BE29C624E000089F67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15BD29C624E000089F67 /* ContentView.swift */; };
+		31BB15C029C6256600089F67 /* ModusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15BF29C6256600089F67 /* ModusApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +127,8 @@
 		31BB15A029C3FA9A00089F67 /* ModlistItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModlistItemView.swift; sourceTree = "<group>"; };
 		31BB15A329C3FA9A00089F67 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		31BB15A529C3FA9A00089F67 /* ModrinthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthService.swift; sourceTree = "<group>"; };
-		31BB15B629C3FC5000089F67 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../Mod Manager/Modus/ContentView.swift"; sourceTree = "<group>"; };
-		31BB15B829C3FC6B00089F67 /* ModusApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModusApp.swift; path = "../../Mod Manager/Modus/ModusApp.swift"; sourceTree = "<group>"; };
+		31BB15BD29C624E000089F67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		31BB15BF29C6256600089F67 /* ModusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,13 +184,13 @@
 				31BB15A429C3FA9A00089F67 /* Utils */,
 				31BB159429C3FA9A00089F67 /* Views */,
 				31BB155929C3FA8000089F67 /* Models */,
-				31BB15B829C3FC6B00089F67 /* ModusApp.swift */,
-				31BB15B629C3FC5000089F67 /* ContentView.swift */,
 				31BB152D29C3F82D00089F67 /* Assets.xcassets */,
 				31BB153229C3F82D00089F67 /* Persistence.swift */,
 				31BB153729C3F82D00089F67 /* Modus.entitlements */,
 				31BB153429C3F82D00089F67 /* Modus.xcdatamodeld */,
 				31BB152F29C3F82D00089F67 /* Preview Content */,
+				31BB15BD29C624E000089F67 /* ContentView.swift */,
+				31BB15BF29C6256600089F67 /* ModusApp.swift */,
 			);
 			path = Modus;
 			sourceTree = "<group>";
@@ -490,6 +490,7 @@
 				31BB159229C3FA8000089F67 /* QueryState.swift in Sources */,
 				31BB159129C3FA8000089F67 /* ModlistItemModel.swift in Sources */,
 				31BB158329C3FA8000089F67 /* ModrinthPermissions.swift in Sources */,
+				31BB15C029C6256600089F67 /* ModusApp.swift in Sources */,
 				31BB158B29C3FA8000089F67 /* ModrinthProjectModel.swift in Sources */,
 				31BB158729C3FA8000089F67 /* ModrinthLicense.swift in Sources */,
 				31BB15A929C3FA9A00089F67 /* NavigationColumnView.swift in Sources */,
@@ -505,8 +506,7 @@
 				31BB159029C3FA8000089F67 /* ModrinthProjectType.swift in Sources */,
 				31BB158029C3FA8000089F67 /* ModrinthRole.swift in Sources */,
 				31BB15A729C3FA9A00089F67 /* SidebarCategory.swift in Sources */,
-				31BB15B729C3FC5000089F67 /* ContentView.swift in Sources */,
-				31BB15B929C3FC6B00089F67 /* ModusApp.swift in Sources */,
+				31BB15BE29C624E000089F67 /* ContentView.swift in Sources */,
 				31BB157F29C3FA8000089F67 /* ModrinthHash.swift in Sources */,
 				31BB158929C3FA8000089F67 /* ModrinthTeamMemberModel.swift in Sources */,
 				31BB158529C3FA8000089F67 /* ModrinthVersionType.swift in Sources */,
