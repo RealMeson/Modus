@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31BB152A29C3F82C00089F67 /* ModusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB152929C3F82C00089F67 /* ModusApp.swift */; };
-		31BB152C29C3F82C00089F67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB152B29C3F82C00089F67 /* ContentView.swift */; };
 		31BB152E29C3F82D00089F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31BB152D29C3F82D00089F67 /* Assets.xcassets */; };
 		31BB153129C3F82D00089F67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31BB153029C3F82D00089F67 /* Preview Assets.xcassets */; };
 		31BB153329C3F82D00089F67 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB153229C3F82D00089F67 /* Persistence.swift */; };
@@ -16,6 +14,49 @@
 		31BB154129C3F82D00089F67 /* ModusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB154029C3F82D00089F67 /* ModusTests.swift */; };
 		31BB154B29C3F82D00089F67 /* ModusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB154A29C3F82D00089F67 /* ModusUITests.swift */; };
 		31BB154D29C3F82D00089F67 /* ModusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB154C29C3F82D00089F67 /* ModusUITestsLaunchTests.swift */; };
+		31BB157829C3FA8000089F67 /* EnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB155A29C3FA8000089F67 /* EnvironmentType.swift */; };
+		31BB157929C3FA8000089F67 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB155B29C3FA8000089F67 /* IconModel.swift */; };
+		31BB157A29C3FA8000089F67 /* ModlistState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB155C29C3FA8000089F67 /* ModlistState.swift */; };
+		31BB157B29C3FA8000089F67 /* ModDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB155D29C3FA8000089F67 /* ModDetailsState.swift */; };
+		31BB157C29C3FA8000089F67 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB155E29C3FA8000089F67 /* Cache.swift */; };
+		31BB157D29C3FA8000089F67 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB155F29C3FA8000089F67 /* Store.swift */; };
+		31BB157E29C3FA8000089F67 /* QueryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156029C3FA8000089F67 /* QueryStatus.swift */; };
+		31BB157F29C3FA8000089F67 /* ModrinthHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156229C3FA8000089F67 /* ModrinthHash.swift */; };
+		31BB158029C3FA8000089F67 /* ModrinthRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156329C3FA8000089F67 /* ModrinthRole.swift */; };
+		31BB158129C3FA8000089F67 /* ModrinthCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156429C3FA8000089F67 /* ModrinthCategory.swift */; };
+		31BB158229C3FA8000089F67 /* ModrinthVersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156529C3FA8000089F67 /* ModrinthVersionModel.swift */; };
+		31BB158329C3FA8000089F67 /* ModrinthPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156629C3FA8000089F67 /* ModrinthPermissions.swift */; };
+		31BB158429C3FA8000089F67 /* ModrinthFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156729C3FA8000089F67 /* ModrinthFile.swift */; };
+		31BB158529C3FA8000089F67 /* ModrinthVersionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156829C3FA8000089F67 /* ModrinthVersionType.swift */; };
+		31BB158629C3FA8000089F67 /* ModrinthUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156929C3FA8000089F67 /* ModrinthUserModel.swift */; };
+		31BB158729C3FA8000089F67 /* ModrinthLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156A29C3FA8000089F67 /* ModrinthLicense.swift */; };
+		31BB158829C3FA8000089F67 /* ModrinthDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156B29C3FA8000089F67 /* ModrinthDependency.swift */; };
+		31BB158929C3FA8000089F67 /* ModrinthTeamMemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156C29C3FA8000089F67 /* ModrinthTeamMemberModel.swift */; };
+		31BB158A29C3FA8000089F67 /* ModrinthDependencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156D29C3FA8000089F67 /* ModrinthDependencyType.swift */; };
+		31BB158B29C3FA8000089F67 /* ModrinthProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156E29C3FA8000089F67 /* ModrinthProjectModel.swift */; };
+		31BB158C29C3FA8000089F67 /* ModrinthImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB156F29C3FA8000089F67 /* ModrinthImage.swift */; };
+		31BB158D29C3FA8000089F67 /* ModrinthSearchResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157029C3FA8000089F67 /* ModrinthSearchResultResponse.swift */; };
+		31BB158E29C3FA8000089F67 /* ModrinthSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157129C3FA8000089F67 /* ModrinthSearchResultModel.swift */; };
+		31BB158F29C3FA8000089F67 /* ModrinthCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157229C3FA8000089F67 /* ModrinthCategoryType.swift */; };
+		31BB159029C3FA8000089F67 /* ModrinthProjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157329C3FA8000089F67 /* ModrinthProjectType.swift */; };
+		31BB159129C3FA8000089F67 /* ModlistItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157429C3FA8000089F67 /* ModlistItemModel.swift */; };
+		31BB159229C3FA8000089F67 /* QueryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157529C3FA8000089F67 /* QueryState.swift */; };
+		31BB159329C3FA8000089F67 /* LoaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157729C3FA8000089F67 /* LoaderType.swift */; };
+		31BB15A629C3FA9A00089F67 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159629C3FA9A00089F67 /* SidebarView.swift */; };
+		31BB15A729C3FA9A00089F67 /* SidebarCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159729C3FA9A00089F67 /* SidebarCategory.swift */; };
+		31BB15A829C3FA9A00089F67 /* SidebarModrinthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159829C3FA9A00089F67 /* SidebarModrinthView.swift */; };
+		31BB15A929C3FA9A00089F67 /* NavigationColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159929C3FA9A00089F67 /* NavigationColumnView.swift */; };
+		31BB15AA29C3FA9A00089F67 /* ModTitleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159B29C3FA9A00089F67 /* ModTitleCardView.swift */; };
+		31BB15AB29C3FA9A00089F67 /* ModDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159C29C3FA9A00089F67 /* ModDetailsView.swift */; };
+		31BB15AC29C3FA9A00089F67 /* ModlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159E29C3FA9A00089F67 /* ModlistView.swift */; };
+		31BB15AD29C3FA9A00089F67 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159F29C3FA9A00089F67 /* LoaderView.swift */; };
+		31BB15AE29C3FA9A00089F67 /* ModlistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15A029C3FA9A00089F67 /* ModlistItemView.swift */; };
+		31BB15AF29C3FA9A00089F67 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15A329C3FA9A00089F67 /* LoadingView.swift */; };
+		31BB15B029C3FA9A00089F67 /* ModrinthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15A529C3FA9A00089F67 /* ModrinthService.swift */; };
+		31BB15B329C3FB7100089F67 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 31BB15B229C3FB7100089F67 /* Nuke */; };
+		31BB15B529C3FB7100089F67 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 31BB15B429C3FB7100089F67 /* NukeUI */; };
+		31BB15B729C3FC5000089F67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15B629C3FC5000089F67 /* ContentView.swift */; };
+		31BB15B929C3FC6B00089F67 /* ModusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15B829C3FC6B00089F67 /* ModusApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +78,6 @@
 
 /* Begin PBXFileReference section */
 		31BB152629C3F82C00089F67 /* Modus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		31BB152929C3F82C00089F67 /* ModusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusApp.swift; sourceTree = "<group>"; };
-		31BB152B29C3F82C00089F67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		31BB152D29C3F82D00089F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31BB153029C3F82D00089F67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		31BB153229C3F82D00089F67 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +88,47 @@
 		31BB154629C3F82D00089F67 /* ModusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31BB154A29C3F82D00089F67 /* ModusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusUITests.swift; sourceTree = "<group>"; };
 		31BB154C29C3F82D00089F67 /* ModusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		31BB155A29C3FA8000089F67 /* EnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentType.swift; sourceTree = "<group>"; };
+		31BB155B29C3FA8000089F67 /* IconModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
+		31BB155C29C3FA8000089F67 /* ModlistState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModlistState.swift; sourceTree = "<group>"; };
+		31BB155D29C3FA8000089F67 /* ModDetailsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModDetailsState.swift; sourceTree = "<group>"; };
+		31BB155E29C3FA8000089F67 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		31BB155F29C3FA8000089F67 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		31BB156029C3FA8000089F67 /* QueryStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStatus.swift; sourceTree = "<group>"; };
+		31BB156229C3FA8000089F67 /* ModrinthHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthHash.swift; sourceTree = "<group>"; };
+		31BB156329C3FA8000089F67 /* ModrinthRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthRole.swift; sourceTree = "<group>"; };
+		31BB156429C3FA8000089F67 /* ModrinthCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthCategory.swift; sourceTree = "<group>"; };
+		31BB156529C3FA8000089F67 /* ModrinthVersionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthVersionModel.swift; sourceTree = "<group>"; };
+		31BB156629C3FA8000089F67 /* ModrinthPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthPermissions.swift; sourceTree = "<group>"; };
+		31BB156729C3FA8000089F67 /* ModrinthFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthFile.swift; sourceTree = "<group>"; };
+		31BB156829C3FA8000089F67 /* ModrinthVersionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthVersionType.swift; sourceTree = "<group>"; };
+		31BB156929C3FA8000089F67 /* ModrinthUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthUserModel.swift; sourceTree = "<group>"; };
+		31BB156A29C3FA8000089F67 /* ModrinthLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthLicense.swift; sourceTree = "<group>"; };
+		31BB156B29C3FA8000089F67 /* ModrinthDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthDependency.swift; sourceTree = "<group>"; };
+		31BB156C29C3FA8000089F67 /* ModrinthTeamMemberModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthTeamMemberModel.swift; sourceTree = "<group>"; };
+		31BB156D29C3FA8000089F67 /* ModrinthDependencyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthDependencyType.swift; sourceTree = "<group>"; };
+		31BB156E29C3FA8000089F67 /* ModrinthProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthProjectModel.swift; sourceTree = "<group>"; };
+		31BB156F29C3FA8000089F67 /* ModrinthImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthImage.swift; sourceTree = "<group>"; };
+		31BB157029C3FA8000089F67 /* ModrinthSearchResultResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthSearchResultResponse.swift; sourceTree = "<group>"; };
+		31BB157129C3FA8000089F67 /* ModrinthSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthSearchResultModel.swift; sourceTree = "<group>"; };
+		31BB157229C3FA8000089F67 /* ModrinthCategoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthCategoryType.swift; sourceTree = "<group>"; };
+		31BB157329C3FA8000089F67 /* ModrinthProjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthProjectType.swift; sourceTree = "<group>"; };
+		31BB157429C3FA8000089F67 /* ModlistItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModlistItemModel.swift; sourceTree = "<group>"; };
+		31BB157529C3FA8000089F67 /* QueryState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryState.swift; sourceTree = "<group>"; };
+		31BB157729C3FA8000089F67 /* LoaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderType.swift; sourceTree = "<group>"; };
+		31BB159629C3FA9A00089F67 /* SidebarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		31BB159729C3FA9A00089F67 /* SidebarCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarCategory.swift; sourceTree = "<group>"; };
+		31BB159829C3FA9A00089F67 /* SidebarModrinthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarModrinthView.swift; sourceTree = "<group>"; };
+		31BB159929C3FA9A00089F67 /* NavigationColumnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationColumnView.swift; sourceTree = "<group>"; };
+		31BB159B29C3FA9A00089F67 /* ModTitleCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModTitleCardView.swift; sourceTree = "<group>"; };
+		31BB159C29C3FA9A00089F67 /* ModDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModDetailsView.swift; sourceTree = "<group>"; };
+		31BB159E29C3FA9A00089F67 /* ModlistView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModlistView.swift; sourceTree = "<group>"; };
+		31BB159F29C3FA9A00089F67 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		31BB15A029C3FA9A00089F67 /* ModlistItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModlistItemView.swift; sourceTree = "<group>"; };
+		31BB15A329C3FA9A00089F67 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		31BB15A529C3FA9A00089F67 /* ModrinthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthService.swift; sourceTree = "<group>"; };
+		31BB15B629C3FC5000089F67 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../Mod Manager/Modus/ContentView.swift"; sourceTree = "<group>"; };
+		31BB15B829C3FC6B00089F67 /* ModusApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModusApp.swift; path = "../../Mod Manager/Modus/ModusApp.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31BB15B329C3FB7100089F67 /* Nuke in Frameworks */,
+				31BB15B529C3FB7100089F67 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +181,11 @@
 		31BB152829C3F82C00089F67 /* Modus */ = {
 			isa = PBXGroup;
 			children = (
-				31BB152929C3F82C00089F67 /* ModusApp.swift */,
-				31BB152B29C3F82C00089F67 /* ContentView.swift */,
+				31BB15A429C3FA9A00089F67 /* Utils */,
+				31BB159429C3FA9A00089F67 /* Views */,
+				31BB155929C3FA8000089F67 /* Models */,
+				31BB15B829C3FC6B00089F67 /* ModusApp.swift */,
+				31BB15B629C3FC5000089F67 /* ContentView.swift */,
 				31BB152D29C3F82D00089F67 /* Assets.xcassets */,
 				31BB153229C3F82D00089F67 /* Persistence.swift */,
 				31BB153729C3F82D00089F67 /* Modus.entitlements */,
@@ -135,6 +220,122 @@
 			path = ModusUITests;
 			sourceTree = "<group>";
 		};
+		31BB155929C3FA8000089F67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31BB155A29C3FA8000089F67 /* EnvironmentType.swift */,
+				31BB155B29C3FA8000089F67 /* IconModel.swift */,
+				31BB155C29C3FA8000089F67 /* ModlistState.swift */,
+				31BB155D29C3FA8000089F67 /* ModDetailsState.swift */,
+				31BB155E29C3FA8000089F67 /* Cache.swift */,
+				31BB155F29C3FA8000089F67 /* Store.swift */,
+				31BB156029C3FA8000089F67 /* QueryStatus.swift */,
+				31BB156129C3FA8000089F67 /* Modrinth */,
+				31BB157429C3FA8000089F67 /* ModlistItemModel.swift */,
+				31BB157529C3FA8000089F67 /* QueryState.swift */,
+				31BB157629C3FA8000089F67 /* Minecraft */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31BB156129C3FA8000089F67 /* Modrinth */ = {
+			isa = PBXGroup;
+			children = (
+				31BB156229C3FA8000089F67 /* ModrinthHash.swift */,
+				31BB156329C3FA8000089F67 /* ModrinthRole.swift */,
+				31BB156429C3FA8000089F67 /* ModrinthCategory.swift */,
+				31BB156529C3FA8000089F67 /* ModrinthVersionModel.swift */,
+				31BB156629C3FA8000089F67 /* ModrinthPermissions.swift */,
+				31BB156729C3FA8000089F67 /* ModrinthFile.swift */,
+				31BB156829C3FA8000089F67 /* ModrinthVersionType.swift */,
+				31BB156929C3FA8000089F67 /* ModrinthUserModel.swift */,
+				31BB156A29C3FA8000089F67 /* ModrinthLicense.swift */,
+				31BB156B29C3FA8000089F67 /* ModrinthDependency.swift */,
+				31BB156C29C3FA8000089F67 /* ModrinthTeamMemberModel.swift */,
+				31BB156D29C3FA8000089F67 /* ModrinthDependencyType.swift */,
+				31BB156E29C3FA8000089F67 /* ModrinthProjectModel.swift */,
+				31BB156F29C3FA8000089F67 /* ModrinthImage.swift */,
+				31BB157029C3FA8000089F67 /* ModrinthSearchResultResponse.swift */,
+				31BB157129C3FA8000089F67 /* ModrinthSearchResultModel.swift */,
+				31BB157229C3FA8000089F67 /* ModrinthCategoryType.swift */,
+				31BB157329C3FA8000089F67 /* ModrinthProjectType.swift */,
+			);
+			path = Modrinth;
+			sourceTree = "<group>";
+		};
+		31BB157629C3FA8000089F67 /* Minecraft */ = {
+			isa = PBXGroup;
+			children = (
+				31BB157729C3FA8000089F67 /* LoaderType.swift */,
+			);
+			path = Minecraft;
+			sourceTree = "<group>";
+		};
+		31BB159429C3FA9A00089F67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31BB159529C3FA9A00089F67 /* Sidebar */,
+				31BB159929C3FA9A00089F67 /* NavigationColumnView.swift */,
+				31BB159A29C3FA9A00089F67 /* Details */,
+				31BB159D29C3FA9A00089F67 /* Modlist */,
+				31BB15A129C3FA9A00089F67 /* Animations */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31BB159529C3FA9A00089F67 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				31BB159629C3FA9A00089F67 /* SidebarView.swift */,
+				31BB159729C3FA9A00089F67 /* SidebarCategory.swift */,
+				31BB159829C3FA9A00089F67 /* SidebarModrinthView.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		31BB159A29C3FA9A00089F67 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				31BB159B29C3FA9A00089F67 /* ModTitleCardView.swift */,
+				31BB159C29C3FA9A00089F67 /* ModDetailsView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		31BB159D29C3FA9A00089F67 /* Modlist */ = {
+			isa = PBXGroup;
+			children = (
+				31BB159E29C3FA9A00089F67 /* ModlistView.swift */,
+				31BB159F29C3FA9A00089F67 /* LoaderView.swift */,
+				31BB15A029C3FA9A00089F67 /* ModlistItemView.swift */,
+			);
+			path = Modlist;
+			sourceTree = "<group>";
+		};
+		31BB15A129C3FA9A00089F67 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				31BB15A229C3FA9A00089F67 /* Loading */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		31BB15A229C3FA9A00089F67 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				31BB15A329C3FA9A00089F67 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		31BB15A429C3FA9A00089F67 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				31BB15A529C3FA9A00089F67 /* ModrinthService.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +352,10 @@
 			dependencies = (
 			);
 			name = Modus;
+			packageProductDependencies = (
+				31BB15B229C3FB7100089F67 /* Nuke */,
+				31BB15B429C3FB7100089F67 /* NukeUI */,
+			);
 			productName = Modus;
 			productReference = 31BB152629C3F82C00089F67 /* Modus.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +428,9 @@
 				Base,
 			);
 			mainGroup = 31BB151D29C3F82C00089F67;
+			packageReferences = (
+				31BB15B129C3FB7100089F67 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 31BB152729C3F82C00089F67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,10 +473,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31BB157E29C3FA8000089F67 /* QueryStatus.swift in Sources */,
+				31BB157A29C3FA8000089F67 /* ModlistState.swift in Sources */,
+				31BB158F29C3FA8000089F67 /* ModrinthCategoryType.swift in Sources */,
+				31BB158D29C3FA8000089F67 /* ModrinthSearchResultResponse.swift in Sources */,
+				31BB15AB29C3FA9A00089F67 /* ModDetailsView.swift in Sources */,
+				31BB15AF29C3FA9A00089F67 /* LoadingView.swift in Sources */,
+				31BB159329C3FA8000089F67 /* LoaderType.swift in Sources */,
+				31BB157C29C3FA8000089F67 /* Cache.swift in Sources */,
 				31BB153329C3F82D00089F67 /* Persistence.swift in Sources */,
-				31BB152C29C3F82C00089F67 /* ContentView.swift in Sources */,
+				31BB158829C3FA8000089F67 /* ModrinthDependency.swift in Sources */,
+				31BB158129C3FA8000089F67 /* ModrinthCategory.swift in Sources */,
+				31BB158429C3FA8000089F67 /* ModrinthFile.swift in Sources */,
+				31BB158A29C3FA8000089F67 /* ModrinthDependencyType.swift in Sources */,
+				31BB158E29C3FA8000089F67 /* ModrinthSearchResultModel.swift in Sources */,
+				31BB159229C3FA8000089F67 /* QueryState.swift in Sources */,
+				31BB159129C3FA8000089F67 /* ModlistItemModel.swift in Sources */,
+				31BB158329C3FA8000089F67 /* ModrinthPermissions.swift in Sources */,
+				31BB158B29C3FA8000089F67 /* ModrinthProjectModel.swift in Sources */,
+				31BB158729C3FA8000089F67 /* ModrinthLicense.swift in Sources */,
+				31BB15A929C3FA9A00089F67 /* NavigationColumnView.swift in Sources */,
+				31BB157929C3FA8000089F67 /* IconModel.swift in Sources */,
+				31BB15A829C3FA9A00089F67 /* SidebarModrinthView.swift in Sources */,
+				31BB158C29C3FA8000089F67 /* ModrinthImage.swift in Sources */,
+				31BB15AC29C3FA9A00089F67 /* ModlistView.swift in Sources */,
+				31BB15B029C3FA9A00089F67 /* ModrinthService.swift in Sources */,
+				31BB157D29C3FA8000089F67 /* Store.swift in Sources */,
+				31BB157829C3FA8000089F67 /* EnvironmentType.swift in Sources */,
 				31BB153629C3F82D00089F67 /* Modus.xcdatamodeld in Sources */,
-				31BB152A29C3F82C00089F67 /* ModusApp.swift in Sources */,
+				31BB15AA29C3FA9A00089F67 /* ModTitleCardView.swift in Sources */,
+				31BB159029C3FA8000089F67 /* ModrinthProjectType.swift in Sources */,
+				31BB158029C3FA8000089F67 /* ModrinthRole.swift in Sources */,
+				31BB15A729C3FA9A00089F67 /* SidebarCategory.swift in Sources */,
+				31BB15B729C3FC5000089F67 /* ContentView.swift in Sources */,
+				31BB15B929C3FC6B00089F67 /* ModusApp.swift in Sources */,
+				31BB157F29C3FA8000089F67 /* ModrinthHash.swift in Sources */,
+				31BB158929C3FA8000089F67 /* ModrinthTeamMemberModel.swift in Sources */,
+				31BB158529C3FA8000089F67 /* ModrinthVersionType.swift in Sources */,
+				31BB15A629C3FA9A00089F67 /* SidebarView.swift in Sources */,
+				31BB158229C3FA8000089F67 /* ModrinthVersionModel.swift in Sources */,
+				31BB15AD29C3FA9A00089F67 /* LoaderView.swift in Sources */,
+				31BB15AE29C3FA9A00089F67 /* ModlistItemView.swift in Sources */,
+				31BB158629C3FA8000089F67 /* ModrinthUserModel.swift in Sources */,
+				31BB157B29C3FA8000089F67 /* ModDetailsState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +823,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		31BB15B129C3FB7100089F67 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = exactVersion;
+				version = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		31BB15B229C3FB7100089F67 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31BB15B129C3FB7100089F67 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		31BB15B429C3FB7100089F67 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31BB15B129C3FB7100089F67 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		31BB153429C3F82D00089F67 /* Modus.xcdatamodeld */ = {
