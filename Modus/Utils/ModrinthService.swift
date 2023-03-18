@@ -11,12 +11,13 @@ import Combine
 class ModrinthAPIService {
     static let shared = ModrinthAPIService()
     // 1
-    func getModlist(limit: Int = 20, offset: Int = 0, query: String = "", categories: Set<String> = Set<String>()) -> AnyPublisher<[ModrinthSearchResultModel], Error> {
+    func getModlist(limit: Int = 20, offset: Int = 0, query: String = "", categories: Set<String> = Set<String>(), sorting: Query.Sorting = .relevance) -> AnyPublisher<[ModrinthSearchResultModel], Error> {
         // 2
         var components = URLComponents(string: "https://api.modrinth.com/v2/search")!
         var queries: [URLQueryItem] = [
             URLQueryItem(name: "limit", value: "\(limit)"),
-            URLQueryItem(name: "offset", value: "\(offset)")
+            URLQueryItem(name: "offset", value: "\(offset)"),
+            URLQueryItem(name: "index", value: "\(sorting.rawValue)")
         ]
         if (!categories.isEmpty) {
             let reduced = categories.reduce("", { string, category in

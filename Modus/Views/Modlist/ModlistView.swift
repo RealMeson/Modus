@@ -15,7 +15,7 @@ struct ModlistView: View {
     var body: some View {
         List(selection: $modDetailsState.selection) {
             ForEach (modlistState.modlist, id: \.id) { mod in
-                ModlistModView(title: mod.title, icon: mod.iconUrl != nil ? IconModel(type: .url, source: mod.iconUrl!) : IconModel(type: .system, source: "circle"))
+                ModlistModView(title: mod.title, icon: mod.iconUrl != nil ? IconModel(type: .url, source: mod.iconUrl!) : IconModel(type: .system, source: "circle"), version: mod.latestVersion)
             }
             LoaderView(isFailed: modlistState.isRequestFailed, status: modlistState.status)
                 .onAppear(perform: fetchData)

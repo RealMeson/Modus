@@ -8,8 +8,9 @@
 import Foundation
 
 struct Query: Equatable {
-    enum Sorting {
+    enum Sorting: String, CaseIterable, Identifiable {
         case relevance, downloads, follows, newest, updated
+        var id: Self { self }
     }
     var projectType: ModrinthProjectType? = nil
     var categories = Set<String>()

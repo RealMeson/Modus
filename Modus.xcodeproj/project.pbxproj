@@ -39,8 +39,7 @@
 		31BB158E29C3FA8000089F67 /* ModrinthSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157129C3FA8000089F67 /* ModrinthSearchResultModel.swift */; };
 		31BB158F29C3FA8000089F67 /* ModrinthCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157229C3FA8000089F67 /* ModrinthCategoryType.swift */; };
 		31BB159029C3FA8000089F67 /* ModrinthProjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157329C3FA8000089F67 /* ModrinthProjectType.swift */; };
-		31BB159129C3FA8000089F67 /* ModlistItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157429C3FA8000089F67 /* ModlistItemModel.swift */; };
-		31BB159229C3FA8000089F67 /* QueryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157529C3FA8000089F67 /* QueryState.swift */; };
+		31BB159229C3FA8000089F67 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157529C3FA8000089F67 /* Query.swift */; };
 		31BB159329C3FA8000089F67 /* LoaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB157729C3FA8000089F67 /* LoaderType.swift */; };
 		31BB15A629C3FA9A00089F67 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159629C3FA9A00089F67 /* SidebarView.swift */; };
 		31BB15A729C3FA9A00089F67 /* SidebarCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB159729C3FA9A00089F67 /* SidebarCategory.swift */; };
@@ -57,6 +56,7 @@
 		31BB15B529C3FB7100089F67 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 31BB15B429C3FB7100089F67 /* NukeUI */; };
 		31BB15BE29C624E000089F67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15BD29C624E000089F67 /* ContentView.swift */; };
 		31BB15C029C6256600089F67 /* ModusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15BF29C6256600089F67 /* ModusApp.swift */; };
+		31BB15C229C642FE00089F67 /* ToolbarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15C129C642FE00089F67 /* ToolbarSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,8 +113,7 @@
 		31BB157129C3FA8000089F67 /* ModrinthSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthSearchResultModel.swift; sourceTree = "<group>"; };
 		31BB157229C3FA8000089F67 /* ModrinthCategoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthCategoryType.swift; sourceTree = "<group>"; };
 		31BB157329C3FA8000089F67 /* ModrinthProjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthProjectType.swift; sourceTree = "<group>"; };
-		31BB157429C3FA8000089F67 /* ModlistItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModlistItemModel.swift; sourceTree = "<group>"; };
-		31BB157529C3FA8000089F67 /* QueryState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryState.swift; sourceTree = "<group>"; };
+		31BB157529C3FA8000089F67 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		31BB157729C3FA8000089F67 /* LoaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderType.swift; sourceTree = "<group>"; };
 		31BB159629C3FA9A00089F67 /* SidebarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		31BB159729C3FA9A00089F67 /* SidebarCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarCategory.swift; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		31BB15A529C3FA9A00089F67 /* ModrinthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthService.swift; sourceTree = "<group>"; };
 		31BB15BD29C624E000089F67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		31BB15BF29C6256600089F67 /* ModusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusApp.swift; sourceTree = "<group>"; };
+		31BB15C129C642FE00089F67 /* ToolbarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,9 +231,9 @@
 				31BB155F29C3FA8000089F67 /* Store.swift */,
 				31BB156029C3FA8000089F67 /* QueryStatus.swift */,
 				31BB156129C3FA8000089F67 /* Modrinth */,
-				31BB157429C3FA8000089F67 /* ModlistItemModel.swift */,
-				31BB157529C3FA8000089F67 /* QueryState.swift */,
+				31BB157529C3FA8000089F67 /* Query.swift */,
 				31BB157629C3FA8000089F67 /* Minecraft */,
+				31BB15C129C642FE00089F67 /* ToolbarSelection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,9 +275,9 @@
 			isa = PBXGroup;
 			children = (
 				31BB159529C3FA9A00089F67 /* Sidebar */,
-				31BB159929C3FA9A00089F67 /* NavigationColumnView.swift */,
-				31BB159A29C3FA9A00089F67 /* Details */,
 				31BB159D29C3FA9A00089F67 /* Modlist */,
+				31BB159A29C3FA9A00089F67 /* Details */,
+				31BB159929C3FA9A00089F67 /* NavigationColumnView.swift */,
 				31BB15A129C3FA9A00089F67 /* Animations */,
 			);
 			path = Views;
@@ -487,8 +487,7 @@
 				31BB158429C3FA8000089F67 /* ModrinthFile.swift in Sources */,
 				31BB158A29C3FA8000089F67 /* ModrinthDependencyType.swift in Sources */,
 				31BB158E29C3FA8000089F67 /* ModrinthSearchResultModel.swift in Sources */,
-				31BB159229C3FA8000089F67 /* QueryState.swift in Sources */,
-				31BB159129C3FA8000089F67 /* ModlistItemModel.swift in Sources */,
+				31BB159229C3FA8000089F67 /* Query.swift in Sources */,
 				31BB158329C3FA8000089F67 /* ModrinthPermissions.swift in Sources */,
 				31BB15C029C6256600089F67 /* ModusApp.swift in Sources */,
 				31BB158B29C3FA8000089F67 /* ModrinthProjectModel.swift in Sources */,
@@ -499,6 +498,7 @@
 				31BB158C29C3FA8000089F67 /* ModrinthImage.swift in Sources */,
 				31BB15AC29C3FA9A00089F67 /* ModlistView.swift in Sources */,
 				31BB15B029C3FA9A00089F67 /* ModrinthService.swift in Sources */,
+				31BB15C229C642FE00089F67 /* ToolbarSelection.swift in Sources */,
 				31BB157D29C3FA8000089F67 /* Store.swift in Sources */,
 				31BB157829C3FA8000089F67 /* EnvironmentType.swift in Sources */,
 				31BB153629C3F82D00089F67 /* Modus.xcdatamodeld in Sources */,
