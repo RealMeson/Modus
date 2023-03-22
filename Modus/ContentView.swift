@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var document: DocumentTestDocument
     @StateObject var store = Store()
     var body: some View {
         NavigationColumnView()
@@ -19,6 +20,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(document: .constant(DocumentTestDocument()))
     }
 }

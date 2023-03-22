@@ -59,6 +59,7 @@
 		31D1567729CA6CC10028D498 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 31D1567629CA6CC10028D498 /* SwiftSoup */; };
 		31D1567A29CA75F10028D498 /* ToolbarVersionSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D1567929CA75F10028D498 /* ToolbarVersionSelector.swift */; };
 		31D1567C29CA789A0028D498 /* ModrinthGameVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D1567B29CA78990028D498 /* ModrinthGameVersion.swift */; };
+		31D156B829CB43860028D498 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D156B729CB43860028D498 /* Document.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,8 @@
 		31BB15C129C642FE00089F67 /* ToolbarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarSelection.swift; sourceTree = "<group>"; };
 		31D1567929CA75F10028D498 /* ToolbarVersionSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarVersionSelector.swift; sourceTree = "<group>"; };
 		31D1567B29CA78990028D498 /* ModrinthGameVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModrinthGameVersion.swift; sourceTree = "<group>"; };
+		31D156B729CB43860028D498 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		31D156B929CB44780028D498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,7 @@
 		31BB152829C3F82C00089F67 /* Modus */ = {
 			isa = PBXGroup;
 			children = (
+				31D156B929CB44780028D498 /* Info.plist */,
 				31BB155929C3FA8000089F67 /* Models */,
 				31BB15A429C3FA9A00089F67 /* Utils */,
 				31BB159429C3FA9A00089F67 /* Views */,
@@ -193,6 +197,7 @@
 				31BB15BD29C624E000089F67 /* ContentView.swift */,
 				31BB15BF29C6256600089F67 /* ModusApp.swift */,
 				31BB152F29C3F82D00089F67 /* Preview Content */,
+				31D156B729CB43860028D498 /* Document.swift */,
 			);
 			path = Modus;
 			sourceTree = "<group>";
@@ -310,8 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				31BB159E29C3FA9A00089F67 /* ModlistView.swift */,
-				31BB159F29C3FA9A00089F67 /* LoaderView.swift */,
 				31BB15A029C3FA9A00089F67 /* ModlistItemView.swift */,
+				31BB159F29C3FA9A00089F67 /* LoaderView.swift */,
 			);
 			path = Modlist;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				31BB157A29C3FA8000089F67 /* ModlistState.swift in Sources */,
 				31BB158F29C3FA8000089F67 /* ModrinthCategoryType.swift in Sources */,
 				31BB158D29C3FA8000089F67 /* ModrinthSearchResultResponse.swift in Sources */,
+				31D156B829CB43860028D498 /* Document.swift in Sources */,
 				31BB15AB29C3FA9A00089F67 /* ModDetailsView.swift in Sources */,
 				31D1567A29CA75F10028D498 /* ToolbarVersionSelector.swift in Sources */,
 				31BB15AF29C3FA9A00089F67 /* LoadingView.swift in Sources */,
@@ -693,6 +699,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Modus/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Modus/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -718,6 +725,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Modus/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Modus/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
