@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct ModDetailsView: View {
     @EnvironmentObject var modDetailsState: ModDetailsState
@@ -15,11 +16,8 @@ struct ModDetailsView: View {
             if (!modDetailsState.modDetails.isEmpty) {
                 let image = modDetailsState.modDetails[0].gallery != nil && modDetailsState.modDetails[0].gallery?.count != 0 ? modDetailsState.modDetails[0].gallery![0].url : nil
                 ModTitleCardView(title: modDetailsState.modDetails[0].title, authors: [], categories: modDetailsState.modDetails[0].categories + modDetailsState.modDetails[0].additionalCategories, image: image)
-                VStack {
-                    Text("\(modDetailsState.modDetails[0].description)")
-                        .font(.body)
-                        .textSelection(.enabled)
-                    Spacer()
+                ScrollView {
+                    Markdown(modDetailsState.modDetails[0].body)
                 }
                 .padding(24)
             }

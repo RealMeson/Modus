@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftSoup
 
 class ModDetailsState: ObservableObject {
     @Published var modDetails: [ModrinthProjectModel] = []
@@ -34,7 +35,10 @@ class ModDetailsState: ObservableObject {
                         }
                     } receiveValue: { mod in
                         // 5
+                        guard let doc: Document = try? SwiftSoup.parse(mod.body) else { return } // parse html
+                        guard let txt = try? doc.text(trimAndNormaliseWhitespace: false) else { return }
                         self.modDetails = [mod]
+                        self.modDetails[0].body = txt
                     }
             }
         }

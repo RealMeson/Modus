@@ -7,6 +7,22 @@
 
 import Foundation
 
-enum ModrinthProjectType: Decodable, Hashable {
+enum ModrinthProjectType: String, CaseIterable, Identifiable, Decodable {
     case mod, modpack, resourcepack, shader
+    var id: Self { self }
+}
+
+extension ModrinthProjectType {
+    var label: String {
+        switch self.id {
+        case .mod:
+            return "Mods"
+        case .modpack:
+            return "Modpacks"
+        case .resourcepack:
+            return "Resource Packs"
+        case .shader:
+            return "Shaders"
+        }
+    }
 }

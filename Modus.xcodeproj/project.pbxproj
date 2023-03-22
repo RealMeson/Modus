@@ -57,6 +57,10 @@
 		31BB15BE29C624E000089F67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15BD29C624E000089F67 /* ContentView.swift */; };
 		31BB15C029C6256600089F67 /* ModusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15BF29C6256600089F67 /* ModusApp.swift */; };
 		31BB15C229C642FE00089F67 /* ToolbarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB15C129C642FE00089F67 /* ToolbarSelection.swift */; };
+		31D1567129CA64C60028D498 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 31D1567029CA64C60028D498 /* MarkdownUI */; };
+		31D1567729CA6CC10028D498 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 31D1567629CA6CC10028D498 /* SwiftSoup */; };
+		31D1567A29CA75F10028D498 /* ToolbarVersionSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D1567929CA75F10028D498 /* ToolbarVersionSelector.swift */; };
+		31D1567C29CA789A0028D498 /* ModrinthGameVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D1567B29CA78990028D498 /* ModrinthGameVersion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +133,8 @@
 		31BB15BD29C624E000089F67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		31BB15BF29C6256600089F67 /* ModusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusApp.swift; sourceTree = "<group>"; };
 		31BB15C129C642FE00089F67 /* ToolbarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarSelection.swift; sourceTree = "<group>"; };
+		31D1567929CA75F10028D498 /* ToolbarVersionSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarVersionSelector.swift; sourceTree = "<group>"; };
+		31D1567B29CA78990028D498 /* ModrinthGameVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModrinthGameVersion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D1567129CA64C60028D498 /* MarkdownUI in Frameworks */,
+				31D1567729CA6CC10028D498 /* SwiftSoup in Frameworks */,
 				31BB15B329C3FB7100089F67 /* Nuke in Frameworks */,
 				31BB15B529C3FB7100089F67 /* NukeUI in Frameworks */,
 			);
@@ -181,9 +189,9 @@
 		31BB152829C3F82C00089F67 /* Modus */ = {
 			isa = PBXGroup;
 			children = (
+				31BB155929C3FA8000089F67 /* Models */,
 				31BB15A429C3FA9A00089F67 /* Utils */,
 				31BB159429C3FA9A00089F67 /* Views */,
-				31BB155929C3FA8000089F67 /* Models */,
 				31BB152D29C3F82D00089F67 /* Assets.xcassets */,
 				31BB153229C3F82D00089F67 /* Persistence.swift */,
 				31BB153729C3F82D00089F67 /* Modus.entitlements */,
@@ -259,6 +267,7 @@
 				31BB157129C3FA8000089F67 /* ModrinthSearchResultModel.swift */,
 				31BB157229C3FA8000089F67 /* ModrinthCategoryType.swift */,
 				31BB157329C3FA8000089F67 /* ModrinthProjectType.swift */,
+				31D1567B29CA78990028D498 /* ModrinthGameVersion.swift */,
 			);
 			path = Modrinth;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 		31BB159429C3FA9A00089F67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				31D1567829CA73560028D498 /* Toolbar */,
 				31BB159529C3FA9A00089F67 /* Sidebar */,
 				31BB159D29C3FA9A00089F67 /* Modlist */,
 				31BB159A29C3FA9A00089F67 /* Details */,
@@ -336,6 +346,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		31D1567829CA73560028D498 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				31D1567929CA75F10028D498 /* ToolbarVersionSelector.swift */,
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,6 +373,8 @@
 			packageProductDependencies = (
 				31BB15B229C3FB7100089F67 /* Nuke */,
 				31BB15B429C3FB7100089F67 /* NukeUI */,
+				31D1567029CA64C60028D498 /* MarkdownUI */,
+				31D1567629CA6CC10028D498 /* SwiftSoup */,
 			);
 			productName = Modus;
 			productReference = 31BB152629C3F82C00089F67 /* Modus.app */;
@@ -430,6 +450,8 @@
 			mainGroup = 31BB151D29C3F82C00089F67;
 			packageReferences = (
 				31BB15B129C3FB7100089F67 /* XCRemoteSwiftPackageReference "Nuke" */,
+				31D1566F29CA64C60028D498 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				31D1567529CA6CC10028D498 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = 31BB152729C3F82C00089F67 /* Products */;
 			projectDirPath = "";
@@ -478,6 +500,7 @@
 				31BB158F29C3FA8000089F67 /* ModrinthCategoryType.swift in Sources */,
 				31BB158D29C3FA8000089F67 /* ModrinthSearchResultResponse.swift in Sources */,
 				31BB15AB29C3FA9A00089F67 /* ModDetailsView.swift in Sources */,
+				31D1567A29CA75F10028D498 /* ToolbarVersionSelector.swift in Sources */,
 				31BB15AF29C3FA9A00089F67 /* LoadingView.swift in Sources */,
 				31BB159329C3FA8000089F67 /* LoaderType.swift in Sources */,
 				31BB157C29C3FA8000089F67 /* Cache.swift in Sources */,
@@ -487,6 +510,7 @@
 				31BB158429C3FA8000089F67 /* ModrinthFile.swift in Sources */,
 				31BB158A29C3FA8000089F67 /* ModrinthDependencyType.swift in Sources */,
 				31BB158E29C3FA8000089F67 /* ModrinthSearchResultModel.swift in Sources */,
+				31D1567C29CA789A0028D498 /* ModrinthGameVersion.swift in Sources */,
 				31BB159229C3FA8000089F67 /* Query.swift in Sources */,
 				31BB158329C3FA8000089F67 /* ModrinthPermissions.swift in Sources */,
 				31BB15C029C6256600089F67 /* ModusApp.swift in Sources */,
@@ -833,6 +857,22 @@
 				version = 12.0.0;
 			};
 		};
+		31D1566F29CA64C60028D498 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.2;
+			};
+		};
+		31D1567529CA6CC10028D498 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -845,6 +885,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 31BB15B129C3FB7100089F67 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
+		};
+		31D1567029CA64C60028D498 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31D1566F29CA64C60028D498 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		31D1567629CA6CC10028D498 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31D1567529CA6CC10028D498 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */
 

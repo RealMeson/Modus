@@ -25,7 +25,7 @@ class ModlistState: ObservableObject {
             self.status = .idle
         }
         // 3
-        cancellable = ModrinthAPIService.shared.getModlist(limit: pageLimit, offset: modlist.count, query: queryForm.query, categories: queryForm.categories, sorting: queryForm.sorting)
+        cancellable = ModrinthAPIService.shared.getModlist(limit: pageLimit, offset: modlist.count, query: queryForm.query, categories: queryForm.categories, sorting: queryForm.sorting, loader: queryForm.loader)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {

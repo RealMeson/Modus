@@ -42,13 +42,27 @@ struct NavigationColumnView: View {
             
             ToolbarItem(id: "Sorting", placement: .secondaryAction) {
                 Picker("Sort by", selection: $modlistState.queryForm.sorting) {
-                    Text("Relevance").tag(Query.Sorting.relevance)
-                    Text("Downloads").tag(Query.Sorting.downloads)
-                    Text("Follows").tag(Query.Sorting.follows)
-                    Text("Newest").tag(Query.Sorting.newest)
-                    Text("Updated").tag(Query.Sorting.updated)
+                    Text(Query.Sorting.relevance.label).tag(Query.Sorting.relevance)
+                    Text(Query.Sorting.downloads.label).tag(Query.Sorting.downloads)
+                    Text(Query.Sorting.follows.label).tag(Query.Sorting.follows)
+                    Text(Query.Sorting.newest.label).tag(Query.Sorting.newest)
+                    Text(Query.Sorting.updated.label).tag(Query.Sorting.updated)
                 }
                 .pickerStyle(.menu)
+            }
+            
+            ToolbarItem(id: "Loader", placement: .secondaryAction) {
+                Picker("Select Loader", selection: $modlistState.queryForm.loader) {
+                    Label("All", systemImage: "circle").tag(nil as LoaderType?)
+                    Section("Mods") {
+                        Label(LoaderType.fabric.label, systemImage: LoaderType.fabric.icon).tag(LoaderType.fabric as LoaderType?)
+                        Label(LoaderType.forge.label, systemImage: LoaderType.forge.icon).tag(LoaderType.forge as LoaderType?)
+                        Label(LoaderType.liteloader.label, systemImage: LoaderType.liteloader.icon).tag(LoaderType.liteloader as LoaderType?)
+                        Label(LoaderType.modloader.label, systemImage: LoaderType.modloader.icon).tag(LoaderType.modloader as LoaderType?)
+                        Label(LoaderType.quilt.label, systemImage: LoaderType.quilt.icon).tag(LoaderType.quilt as LoaderType?)
+                        Label(LoaderType.rift.label, systemImage: LoaderType.rift.icon).tag(LoaderType.rift as LoaderType?)
+                    }
+                }
             }
         }
     }
