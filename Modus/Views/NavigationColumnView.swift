@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct NavigationColumnView: View {
+    @Environment(\.undoManager) var undoManager
     @State private var columnVisibility = NavigationSplitViewVisibility.all
     @EnvironmentObject var modlistState: ModlistState
+    @EnvironmentObject var document: DocumentTestDocument
     
     @State var selection: Int = 0
     @State var viewSelection = ModlistViewType.compact
@@ -31,6 +33,14 @@ struct NavigationColumnView: View {
             modlistState.getModlist(refresh: true)
         }
         .toolbar {
+            ToolbarItem(id: "Download", placement: .primaryAction) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "arrow.down")
+                }
+            }
+            
             ToolbarItem(id: "ListView", placement: .secondaryAction) {
                 Picker("List View Type", selection: $viewSelection) {
                     Label("Grid", systemImage: "square.grid.2x2").tag(ModlistViewType.grid)

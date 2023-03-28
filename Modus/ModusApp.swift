@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct ModusApp: App {
+struct Modus: App {
     var body: some Scene {
-        WindowGroup {
+        DocumentGroup(newDocument: { DocumentTestDocument() }) { configuration in
+            ContentView()
+        }
+        DocumentGroup(newDocument: { PlainTextDocument() }) { configuration in
             ContentView()
         }
     }
 }
+

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UniformTypeIdentifiers
 
 class ModlistState: ObservableObject {
     // 1
