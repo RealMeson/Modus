@@ -19,8 +19,7 @@ struct LoaderView: View {
                         .foregroundColor(.red)
                         .padding()
                 } else {
-                    LoadingView()
-                        .foregroundColor(.accentColor)
+                    ProgressView()
                 }
             }
             Spacer()

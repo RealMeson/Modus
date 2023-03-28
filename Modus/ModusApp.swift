@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct Modus: App {
     var body: some Scene {
-        DocumentGroup(newDocument: DocumentTestDocument()) { file in
-            ContentView(document: file.$document)
+        DocumentGroup(newDocument: { DocumentTestDocument() }) { configuration in
+            ContentView()
+        }
+        DocumentGroup(newDocument: { PlainTextDocument() }) { configuration in
+            ContentView()
         }
     }
 }

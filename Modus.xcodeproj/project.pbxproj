@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3199D80A29CBB5C5009D1C10 /* ModusFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199D80929CBB5C5009D1C10 /* ModusFile.swift */; };
+		3199D80C29CBB60A009D1C10 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199D80B29CBB60A009D1C10 /* GameType.swift */; };
+		3199D80E29CBB6D5009D1C10 /* ModSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199D80D29CBB6D5009D1C10 /* ModSourceType.swift */; };
+		3199D81029CE1416009D1C10 /* PlainTextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199D80F29CE1416009D1C10 /* PlainTextDocument.swift */; };
 		31BB152E29C3F82D00089F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31BB152D29C3F82D00089F67 /* Assets.xcassets */; };
 		31BB153129C3F82D00089F67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31BB153029C3F82D00089F67 /* Preview Assets.xcassets */; };
 		31BB154129C3F82D00089F67 /* ModusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BB154029C3F82D00089F67 /* ModusTests.swift */; };
@@ -59,7 +63,7 @@
 		31D1567729CA6CC10028D498 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 31D1567629CA6CC10028D498 /* SwiftSoup */; };
 		31D1567A29CA75F10028D498 /* ToolbarVersionSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D1567929CA75F10028D498 /* ToolbarVersionSelector.swift */; };
 		31D1567C29CA789A0028D498 /* ModrinthGameVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D1567B29CA78990028D498 /* ModrinthGameVersion.swift */; };
-		31D156B829CB43860028D498 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D156B729CB43860028D498 /* Document.swift */; };
+		31D156B829CB43860028D498 /* ModusDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D156B729CB43860028D498 /* ModusDocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3199D80929CBB5C5009D1C10 /* ModusFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusFile.swift; sourceTree = "<group>"; };
+		3199D80B29CBB60A009D1C10 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		3199D80D29CBB6D5009D1C10 /* ModSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModSourceType.swift; sourceTree = "<group>"; };
+		3199D80F29CE1416009D1C10 /* PlainTextDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextDocument.swift; sourceTree = "<group>"; };
 		31BB152629C3F82C00089F67 /* Modus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31BB152D29C3F82D00089F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31BB153029C3F82D00089F67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -132,7 +140,7 @@
 		31BB15C129C642FE00089F67 /* ToolbarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarSelection.swift; sourceTree = "<group>"; };
 		31D1567929CA75F10028D498 /* ToolbarVersionSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarVersionSelector.swift; sourceTree = "<group>"; };
 		31D1567B29CA78990028D498 /* ModrinthGameVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModrinthGameVersion.swift; sourceTree = "<group>"; };
-		31D156B729CB43860028D498 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		31D156B729CB43860028D498 /* ModusDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusDocument.swift; sourceTree = "<group>"; };
 		31D156B929CB44780028D498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,7 +205,8 @@
 				31BB15BD29C624E000089F67 /* ContentView.swift */,
 				31BB15BF29C6256600089F67 /* ModusApp.swift */,
 				31BB152F29C3F82D00089F67 /* Preview Content */,
-				31D156B729CB43860028D498 /* Document.swift */,
+				31D156B729CB43860028D498 /* ModusDocument.swift */,
+				3199D80F29CE1416009D1C10 /* PlainTextDocument.swift */,
 			);
 			path = Modus;
 			sourceTree = "<group>";
@@ -241,6 +250,9 @@
 				31BB157529C3FA8000089F67 /* Query.swift */,
 				31BB157629C3FA8000089F67 /* Minecraft */,
 				31BB15C129C642FE00089F67 /* ToolbarSelection.swift */,
+				3199D80929CBB5C5009D1C10 /* ModusFile.swift */,
+				3199D80B29CBB60A009D1C10 /* GameType.swift */,
+				3199D80D29CBB6D5009D1C10 /* ModSourceType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -498,13 +510,15 @@
 				31BB157A29C3FA8000089F67 /* ModlistState.swift in Sources */,
 				31BB158F29C3FA8000089F67 /* ModrinthCategoryType.swift in Sources */,
 				31BB158D29C3FA8000089F67 /* ModrinthSearchResultResponse.swift in Sources */,
-				31D156B829CB43860028D498 /* Document.swift in Sources */,
+				31D156B829CB43860028D498 /* ModusDocument.swift in Sources */,
 				31BB15AB29C3FA9A00089F67 /* ModDetailsView.swift in Sources */,
 				31D1567A29CA75F10028D498 /* ToolbarVersionSelector.swift in Sources */,
+				3199D80E29CBB6D5009D1C10 /* ModSourceType.swift in Sources */,
 				31BB15AF29C3FA9A00089F67 /* LoadingView.swift in Sources */,
 				31BB159329C3FA8000089F67 /* LoaderType.swift in Sources */,
 				31BB157C29C3FA8000089F67 /* Cache.swift in Sources */,
 				31BB158829C3FA8000089F67 /* ModrinthDependency.swift in Sources */,
+				3199D81029CE1416009D1C10 /* PlainTextDocument.swift in Sources */,
 				31BB158129C3FA8000089F67 /* ModrinthCategory.swift in Sources */,
 				31BB158429C3FA8000089F67 /* ModrinthFile.swift in Sources */,
 				31BB158A29C3FA8000089F67 /* ModrinthDependencyType.swift in Sources */,
@@ -513,6 +527,7 @@
 				31BB159229C3FA8000089F67 /* Query.swift in Sources */,
 				31BB158329C3FA8000089F67 /* ModrinthPermissions.swift in Sources */,
 				31BB15C029C6256600089F67 /* ModusApp.swift in Sources */,
+				3199D80A29CBB5C5009D1C10 /* ModusFile.swift in Sources */,
 				31BB158B29C3FA8000089F67 /* ModrinthProjectModel.swift in Sources */,
 				31BB158729C3FA8000089F67 /* ModrinthLicense.swift in Sources */,
 				31BB15A929C3FA9A00089F67 /* NavigationColumnView.swift in Sources */,
@@ -538,6 +553,7 @@
 				31BB15AE29C3FA9A00089F67 /* ModlistItemView.swift in Sources */,
 				31BB158629C3FA8000089F67 /* ModrinthUserModel.swift in Sources */,
 				31BB157B29C3FA8000089F67 /* ModDetailsState.swift in Sources */,
+				3199D80C29CBB60A009D1C10 /* GameType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
