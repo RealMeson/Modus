@@ -1,37 +1,35 @@
 //
-//  NavigationColumnView.swift
-//  Mod Manager
+//  ContentView.swift
+//  Modus
 //
-//  Created by Sean Romel on 2023-02-03.
+//  Created by Sean Romel on 2023-03-18.
 //
-
 import SwiftUI
 
-struct NavigationColumnView: View {
-    @Environment(\.undoManager) var undoManager
+struct ModrinthView: View {
     @State private var columnVisibility = NavigationSplitViewVisibility.all
+    @State var selection: ModrinthProjectModel.ID? = nil
+
     @EnvironmentObject var modlistState: ModlistState
-    @EnvironmentObject var document: DocumentTestDocument
-    
-    @State var selection: Int = 0
     @State var viewSelection = ModlistViewType.compact
+    @State var search: String = ""
     
     var body: some View {
         NavigationSplitView (columnVisibility: $columnVisibility) {
-            SidebarView(selection: $selection)
+            SidebarModrinthView()
                 .navigationTitle("Categories")
+                .navigationSplitViewColumnWidth(175)
         } content: {
-            ModlistView()
-                .navigationTitle("Mods")
+            ModlistView(selection: $selection)
+                .navigationTitle("Modrinth")
         } detail: {
-            ModDetailsView()
-                .navigationTitle("Details")
+            if let id = selection {
+                ModrinthDetailsView(id: id)
+            } else {
+                Text("Select project")
+            }
         }
-        .navigationSplitViewStyle(.balanced)
-        .searchable(text: $modlistState.queryForm.query)
-        .onChange(of: modlistState.queryForm) { _ in
-            modlistState.getModlist(refresh: true)
-        }
+        /*
         .toolbar {
             ToolbarItem(id: "Download", placement: .primaryAction) {
                 Button {
@@ -75,15 +73,17 @@ struct NavigationColumnView: View {
                 }
             }
         }
+         */
     }
 }
 
-struct NavigationColumnView_Previews: PreviewProvider {
+struct ModrinthView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            NavigationColumnView()
+            ModrinthView()
                 .environmentObject(ModlistState())
-                .environmentObject(ModDetailsState())
+                .environmentObject(ModrinthVersionsState())
         }
     }
 }
+

@@ -35,12 +35,10 @@ struct ModlistModView: View {
             }
             .lineLimit(1)
             Spacer()
-            Text("\(version)")
         }
         .padding(.vertical, 4)
-        .padding(.horizontal, 8)
         .onHover { over in
-                hover = over
+            hover = over
         }
     }
 }

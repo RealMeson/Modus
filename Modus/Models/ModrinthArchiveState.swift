@@ -1,15 +1,14 @@
 //
-//  ModDetailsState.swift
-//  Mod Manager
+//  ModrinthArchiveStore.swift
+//  Modus
 //
-//  Created by Sean Romel on 2023-03-07.
+//  Created by Sean Romel on 2023-04-01.
 //
 
 import Foundation
 import Combine
-import SwiftSoup
 
-class ModDetailsState: ObservableObject {
+class ModrinthArchiveState: ObservableObject {
     @Published var modDetails: [ModrinthProjectModel] = []
     @Published var isRequestFailed = false
     @Published var selection = Set<String>()
@@ -35,10 +34,7 @@ class ModDetailsState: ObservableObject {
                         }
                     } receiveValue: { mod in
                         // 5
-                        guard let doc: Document = try? SwiftSoup.parse(mod.body) else { return } // parse html
-                        guard let txt = try? doc.text(trimAndNormaliseWhitespace: false) else { return }
                         self.modDetails = [mod]
-                        self.modDetails[0].body = txt
                     }
             }
         }

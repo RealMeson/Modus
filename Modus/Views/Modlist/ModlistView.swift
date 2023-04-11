@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ModlistView: View {
-    @State private var modSelection = Set<String>()
+    @Binding var selection: ModrinthProjectModel.ID?
+
     @EnvironmentObject var modlistState: ModlistState
-    @EnvironmentObject var modDetailsState: ModDetailsState
 
     var body: some View {
-        List(selection: $modDetailsState.selection) {
-            ForEach (modlistState.modlist, id: \.id) { mod in
+        List(selection: $selection) {
+            ForEach (modlistState.modlist) { mod in
                 ModlistModView(title: mod.title, icon: mod.iconUrl != nil ? IconModel(type: .url, source: mod.iconUrl!) : IconModel(type: .system, source: "circle"), version: mod.latestVersion)
             }
             LoaderView(isFailed: modlistState.isRequestFailed, status: modlistState.status)
@@ -41,8 +41,7 @@ struct ModlistView: View {
 
 struct ModlistView_Previews: PreviewProvider {
     static var previews: some View {
-        ModlistView()
+        ModlistView(selection: .constant(nil))
             .environmentObject(ModlistState())
-            .environmentObject(ModDetailsState())
     }
 }

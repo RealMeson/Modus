@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum ModrinthRole: Decodable {
+enum ModrinthRole: String, CaseIterable, Identifiable, Decodable {
     case admin, moderator, developer
+    var id: Self { self }
 }

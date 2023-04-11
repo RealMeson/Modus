@@ -9,6 +9,9 @@ import Foundation
 import Combine
 
 class ModrinthAPIService {
+    static private let scheme = "https"
+    static private let host = "api.modrinth.com"
+
     static let shared = ModrinthAPIService()
     // 1
     func getModlist(limit: Int = 20, offset: Int = 0, query: String = "", categories: Set<String> = Set<String>(), sorting: Query.Sorting = .relevance, loader: LoaderType? = nil) -> AnyPublisher<[ModrinthSearchResultModel], Error> {
@@ -49,6 +52,22 @@ class ModrinthAPIService {
         return URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
             .decode(type: ModrinthProjectModel.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
+    
+    func getVersions(_ ids: [ModrinthVersionModel.ID]) -> AnyPublisher<[ModrinthVersionModel], Error> {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.modrinth.com"
+        components.path = "v2/versions"
+        components.queryItems = [
+            URLQueryItem(name: "ids", value: ids.description)
+        ]
+        print("\(components.url!)")
+        let request = URLRequest(url: components.url!, timeoutInterval: 10)
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .map(\.data)
+            .decode(type: [ModrinthVersionModel].self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }

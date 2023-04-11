@@ -10,8 +10,9 @@ import NukeUI
 
 struct ModTitleCardView: View {
     private let imageSize: CGFloat = 250
+    var id: String
     var title: String
-    var authors: [String]
+    var teamId: String
     var categories: [ModrinthCategoryType]
     var image: URL?
 
@@ -40,9 +41,9 @@ struct ModTitleCardView: View {
                             .background(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .center, endPoint: .bottom)))
             }
             HStack (alignment: .lastTextBaseline, spacing: 12) {
-                Text("\(title)")
-                    .font(.system(size: 24, weight: .medium, design: .rounded))
-                Text("by Author")
+                Link(title, destination: URL(string: "https://modrinth.com/mod/\(id)")!)
+                        .font(.system(size: 24, weight: .medium, design: .rounded))
+                TeamView(id: teamId)
                 Spacer()
                 categoryIcons
             }
@@ -105,6 +106,6 @@ struct ModTitleCardView: View {
 
 struct ModTitleCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ModTitleCardView(title: "Simple Voice Chat", authors: [], categories: [.utility, .worldGeneration], image: URL(string: "https://cdn.modrinth.com/data/9eGKb6K1/images/975131df603729941d6549a8e78fed1509bf0518.png"))
+        ModTitleCardView(id: "simple-voice-chat", title: "Simple Voice Chat", teamId: "O9wOHL2n", categories: [.utility, .worldGeneration], image: URL(string: "https://cdn.modrinth.com/data/9eGKb6K1/images/975131df603729941d6549a8e78fed1509bf0518.png"))
     }
 }

@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ToolbarVersionSelector: View {
-    @EnvironmentObject var modDetails: ModDetailsState
-
     var body: some View {
         Menu {
         } label: {

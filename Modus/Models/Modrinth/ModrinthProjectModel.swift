@@ -29,7 +29,7 @@ struct ModrinthProjectModel: Identifiable, Hashable {
     var donationsUrl: URL?
     var iconUrl: URL?
     var license: ModrinthLicense?
-    var versions: [String]
+    var versions: [ModrinthVersionModel.ID]
     var gallery: [ModrinthImage]?
 }
 
@@ -79,7 +79,12 @@ extension ModrinthProjectModel: Decodable {
         issuesUrl = try container.decodeIfPresent(URL.self, forKey: .issuesUrl)
         sourceUrl = try container.decodeIfPresent(URL.self, forKey: .sourceUrl)
         wikiUrl = try container.decodeIfPresent(URL.self, forKey: .wikiUrl)
-        discordUrl = try container.decodeIfPresent(URL.self, forKey: .discordUrl)
+        let discord = try container.decodeIfPresent(String.self, forKey: .discordUrl)
+        if let string = discord, let url = URL(string: string) {
+            discordUrl = url
+        } else {
+            discordUrl = nil
+        }
         donationsUrl = try container.decodeIfPresent(URL.self, forKey: .donationsUrl)
         iconUrl = try container.decodeIfPresent(URL.self, forKey: .iconUrl)
         license = try container.decode(ModrinthLicense.self, forKey: .license)
