@@ -23,8 +23,7 @@ struct SidebarView: View {
     @State private var icons = [
         SidebarIcon(imageName: "folder", title: "Categories", id: 0, usesFill: true),
         SidebarIcon(imageName: "exclamationmark.triangle", title: "Alerts", id: 1, usesFill: true),
-        SidebarIcon(imageName: "wrench.and.screwdriver", title: "Tools", id: 2, usesFill: true),
-        SidebarIcon(imageName: "Modrinth", title: "Modrinth", id: 3, isCustom: true),
+        SidebarIcon(imageName: "wrench.and.screwdriver", title: "Tools", id: 2, usesFill: true)
     ]
 
     var body: some View {
@@ -45,8 +44,6 @@ struct SidebarView: View {
                 Text("Installed Mods")
             case 1:
                 Text("Errors")
-            case 3:
-                SidebarModrinthView()
             default:
                 Spacer()
             }
@@ -61,7 +58,6 @@ struct SidebarView_Previews: PreviewProvider {
             SidebarView(selection: .constant(0))
             SidebarView(selection: .constant(1))
             SidebarView(selection: .constant(2))
-            SidebarView(selection: .constant(3))
         }
     }
 }

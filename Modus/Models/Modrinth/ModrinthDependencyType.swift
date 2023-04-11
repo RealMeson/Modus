@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum ModrinthDependencyType: Decodable {
+enum ModrinthDependencyType: String, CaseIterable, Identifiable, Codable, Equatable, Hashable {
     case required, optional, incompatible, embedded
+    var id: Self { self }
 }

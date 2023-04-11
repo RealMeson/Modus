@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum ModrinthVersionType: Decodable {
+enum ModrinthVersionType: String, CaseIterable, Identifiable, Codable, Equatable, Hashable {
     case alpha, beta, release
+    var id: Self { self }
 }

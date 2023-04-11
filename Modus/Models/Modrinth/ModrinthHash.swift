@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ModrinthHash: Decodable {
+struct ModrinthHash: Codable, Equatable, Hashable {
     var sha512: String
     var sha1: String
 }
