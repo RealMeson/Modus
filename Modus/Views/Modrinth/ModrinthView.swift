@@ -29,6 +29,7 @@ struct ModrinthView: View {
                 Text("Select project")
             }
         }
+        .navigationSplitViewStyle(.prominentDetail)
         /*
         .toolbar {
             ToolbarItem(id: "Download", placement: .primaryAction) {

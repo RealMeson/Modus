@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3102047A29EF412D00B770CF /* GitHubLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102047929EF412D00B770CF /* GitHubLabelModel.swift */; };
+		3102047F29EF429900B770CF /* GitHubLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102047E29EF429900B770CF /* GitHubLabelView.swift */; };
 		3158C66029D8D7F400E1D539 /* ModrinthVersionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3158C65F29D8D7F400E1D539 /* ModrinthVersionsView.swift */; };
 		3158C66229D8D83200E1D539 /* ModrinthArchiveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3158C66129D8D83200E1D539 /* ModrinthArchiveState.swift */; };
 		3158C66429D8D9F900E1D539 /* ModrinthVersionsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3158C66329D8D9F900E1D539 /* ModrinthVersionsState.swift */; };
 		3158C66C29DE3C5900E1D539 /* ModrinthTeamState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3158C66B29DE3C5900E1D539 /* ModrinthTeamState.swift */; };
 		3158C67229DE43DE00E1D539 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3158C67129DE43DE00E1D539 /* TeamView.swift */; };
 		317151FB29E50D5B00075ED6 /* ModrinthGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317151FA29E50D5B00075ED6 /* ModrinthGalleryView.swift */; };
+		3171520129E60C8300075ED6 /* GitHubIssuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3171520029E60C8300075ED6 /* GitHubIssuesModel.swift */; };
+		3171520629E626F400075ED6 /* GitHubIssuesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3171520529E626F400075ED6 /* GitHubIssuesStore.swift */; };
+		3171520A29E6370A00075ED6 /* GitHubIssuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3171520929E6370A00075ED6 /* GitHubIssuesView.swift */; };
 		3199D80A29CBB5C5009D1C10 /* ModusFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199D80929CBB5C5009D1C10 /* ModusFile.swift */; };
 		3199D80C29CBB60A009D1C10 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199D80B29CBB60A009D1C10 /* GameType.swift */; };
 		3199D80E29CBB6D5009D1C10 /* ModSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199D80D29CBB6D5009D1C10 /* ModSourceType.swift */; };
@@ -90,12 +95,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3102047929EF412D00B770CF /* GitHubLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubLabelModel.swift; sourceTree = "<group>"; };
+		3102047E29EF429900B770CF /* GitHubLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubLabelView.swift; sourceTree = "<group>"; };
 		3158C65F29D8D7F400E1D539 /* ModrinthVersionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModrinthVersionsView.swift; sourceTree = "<group>"; };
 		3158C66129D8D83200E1D539 /* ModrinthArchiveState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModrinthArchiveState.swift; sourceTree = "<group>"; };
 		3158C66329D8D9F900E1D539 /* ModrinthVersionsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModrinthVersionsState.swift; sourceTree = "<group>"; };
 		3158C66B29DE3C5900E1D539 /* ModrinthTeamState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModrinthTeamState.swift; sourceTree = "<group>"; };
 		3158C67129DE43DE00E1D539 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		317151FA29E50D5B00075ED6 /* ModrinthGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModrinthGalleryView.swift; sourceTree = "<group>"; };
+		3171520029E60C8300075ED6 /* GitHubIssuesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubIssuesModel.swift; sourceTree = "<group>"; };
+		3171520529E626F400075ED6 /* GitHubIssuesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubIssuesStore.swift; sourceTree = "<group>"; };
+		3171520929E6370A00075ED6 /* GitHubIssuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubIssuesView.swift; sourceTree = "<group>"; };
 		3199D80929CBB5C5009D1C10 /* ModusFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusFile.swift; sourceTree = "<group>"; };
 		3199D80B29CBB60A009D1C10 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		3199D80D29CBB6D5009D1C10 /* ModSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModSourceType.swift; sourceTree = "<group>"; };
@@ -185,6 +195,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3102047B29EF41AE00B770CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3158C65D29D8D7D700E1D539 /* Modrinth */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +231,42 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		317151FC29E605F300075ED6 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				3171520429E626DD00075ED6 /* Stores */,
+				317151FD29E605FA00075ED6 /* Models */,
+				317151FE29E6062E00075ED6 /* Views */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		317151FD29E605FA00075ED6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3171520029E60C8300075ED6 /* GitHubIssuesModel.swift */,
+				3102047929EF412D00B770CF /* GitHubLabelModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		317151FE29E6062E00075ED6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3171520929E6370A00075ED6 /* GitHubIssuesView.swift */,
+				3102047E29EF429900B770CF /* GitHubLabelView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3171520429E626DD00075ED6 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				3171520529E626F400075ED6 /* GitHubIssuesStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 		31BB151D29C3F82C00089F67 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +290,8 @@
 		31BB152829C3F82C00089F67 /* Modus */ = {
 			isa = PBXGroup;
 			children = (
+				3102047B29EF41AE00B770CF /* Extensions */,
+				317151FC29E605F300075ED6 /* GitHub */,
 				31D156B929CB44780028D498 /* Info.plist */,
 				31BB155929C3FA8000089F67 /* Models */,
 				31BB15A429C3FA9A00089F67 /* Utils */,
@@ -550,6 +605,7 @@
 			files = (
 				31BB157E29C3FA8000089F67 /* QueryStatus.swift in Sources */,
 				31BB157A29C3FA8000089F67 /* ModlistState.swift in Sources */,
+				3171520129E60C8300075ED6 /* GitHubIssuesModel.swift in Sources */,
 				31BB158F29C3FA8000089F67 /* ModrinthCategoryType.swift in Sources */,
 				31BB158D29C3FA8000089F67 /* ModrinthSearchResultResponse.swift in Sources */,
 				31D156B829CB43860028D498 /* ModusDocument.swift in Sources */,
@@ -563,6 +619,7 @@
 				3158C66229D8D83200E1D539 /* ModrinthArchiveState.swift in Sources */,
 				31BB158829C3FA8000089F67 /* ModrinthDependency.swift in Sources */,
 				3199D81029CE1416009D1C10 /* PlainTextDocument.swift in Sources */,
+				3171520A29E6370A00075ED6 /* GitHubIssuesView.swift in Sources */,
 				31BB158129C3FA8000089F67 /* ModrinthCategory.swift in Sources */,
 				31BB158429C3FA8000089F67 /* ModrinthFile.swift in Sources */,
 				31BB158A29C3FA8000089F67 /* ModrinthDependencyType.swift in Sources */,
@@ -587,12 +644,14 @@
 				31BB15AA29C3FA9A00089F67 /* ModTitleCardView.swift in Sources */,
 				31BB159029C3FA8000089F67 /* ModrinthProjectType.swift in Sources */,
 				3158C66429D8D9F900E1D539 /* ModrinthVersionsState.swift in Sources */,
+				3102047F29EF429900B770CF /* GitHubLabelView.swift in Sources */,
 				31BB158029C3FA8000089F67 /* ModrinthRole.swift in Sources */,
 				31BB15A729C3FA9A00089F67 /* SidebarCategory.swift in Sources */,
 				31BB15BE29C624E000089F67 /* ModrinthView.swift in Sources */,
 				31BB157F29C3FA8000089F67 /* ModrinthHash.swift in Sources */,
 				31BB158929C3FA8000089F67 /* ModrinthTeamMemberModel.swift in Sources */,
 				31BB158529C3FA8000089F67 /* ModrinthVersionType.swift in Sources */,
+				3102047A29EF412D00B770CF /* GitHubLabelModel.swift in Sources */,
 				31BB15A629C3FA9A00089F67 /* SidebarView.swift in Sources */,
 				3158C66C29DE3C5900E1D539 /* ModrinthTeamState.swift in Sources */,
 				31BB158229C3FA8000089F67 /* ModrinthVersionModel.swift in Sources */,
@@ -601,6 +660,7 @@
 				31BB158629C3FA8000089F67 /* ModrinthUserModel.swift in Sources */,
 				31BB157B29C3FA8000089F67 /* ModrinthProjectState.swift in Sources */,
 				3158C67229DE43DE00E1D539 /* TeamView.swift in Sources */,
+				3171520629E626F400075ED6 /* GitHubIssuesStore.swift in Sources */,
 				3199D80C29CBB60A009D1C10 /* GameType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

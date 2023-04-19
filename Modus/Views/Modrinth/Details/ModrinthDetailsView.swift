@@ -8,44 +8,93 @@
 import SwiftUI
 import MarkdownUI
 
+enum Selection: String, CaseIterable, Identifiable {
+    case description, gallery, issues
+    var id: Self { self }
+}
+
+extension Selection {
+    var icon: String {
+        switch self.id {
+        case .description:
+            return "text.justify.left"
+        case .gallery:
+            return "photo"
+        case .issues:
+            return "exclamationmark.triangle"
+        }
+    }
+}
+
+extension Selection {
+    var label: String {
+        switch self.id {
+        case .description:
+            return "Description"
+        case .gallery:
+            return "Gallery"
+        case .issues:
+            return "Issues"
+        }
+    }
+}
+
+
 struct ModrinthDetailsView: View {
     let id: ModrinthProjectModel.ID
+    @State var selection: Selection = .description
 
     @EnvironmentObject var projectState: ModrinthProjectState
 
     var body: some View {
-        TabView {
+        VStack {
             if let project = projectState.project {
-                VStack (alignment: .leading) {
-                    //let image = project.gallery != nil && project.gallery?.count != 0 ? project.gallery![0].url : nil
-                    //ModTitleCardView(id: project.id, title: project.title, teamId: project.team, categories: project.categories + project.additionalCategories, image: image)
-                    ScrollView {
-                        Markdown(project.body)
+                ModTitleCardView(id: project.id, title: project.title, teamId: project.team, categories: project.categories)
+                Picker("Section", selection: $selection) {
+                    Label(Selection.description.label, systemImage: Selection.description.icon).tag(Selection.description)
+                    if let gallery = project.gallery, !gallery.isEmpty {
+                        Label(Selection.gallery.label, systemImage: Selection.gallery.icon).tag(Selection.gallery)
                     }
-                    .padding(24)
-                }
-                .tabItem {
-                    Label("Description", systemImage: "text.justify.left")
-                }
-                TeamView(id: project.team)
-                    .tabItem {
-                        Label("Authors", systemImage: "person.2")
+                    if project.issuesUrl != nil {
+                        Label(Selection.issues.label, systemImage: Selection.issues.icon).tag(Selection.issues)
                     }
-                if let gallery = project.gallery, !gallery.isEmpty {
-                    ModrinthGalleryView(gallery: gallery)
-                        .tabItem {
-                            Label("Gallery", systemImage: "photo")
+                }
+                .padding(.vertical, 4)
+                .labelsHidden()
+                .pickerStyle(.segmented)
+                switch selection {
+                case .description:
+                    VStack (alignment: .leading) {
+                        //let image = project.gallery != nil && project.gallery?.count != 0 ? project.gallery![0].url : nil
+                        //ModTitleCardView(id: project.id, title: project.title, teamId: project.team, categories: project.categories + project.additionalCategories, image: image)
+                        ScrollView {
+                            Markdown(project.body)
+                                .padding(.horizontal, 24)
                         }
+                    }
+                case .gallery:
+                    if let gallery = project.gallery {
+                        ModrinthGalleryView(gallery: gallery)
+                    }
+                case .issues:
+                    if let issues = project.issuesUrl {
+                        switch issues.host() {
+                        case "github.com":
+                            GitHubIssuesView(owner: issues.pathComponents[1], name: issues.pathComponents[2])
+                        default:
+                            Text("Issues source not supported")
+                        }
+                    }
                 }
-                /*
-                if let issues = project.issuesUrl, issues.host?.contains("github.com") {
-                }
-                 */
             }
         }
-        .padding(4)
+        .onAppear {
+            print("hellO")
+        }
+        .padding(12)
         .task(id: id) {
             try? await projectState.getProject(id: id)
+            selection = .description
         }
     }
 }

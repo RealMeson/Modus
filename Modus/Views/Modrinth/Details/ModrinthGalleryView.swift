@@ -16,8 +16,8 @@ struct ModrinthGalleryView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [.init(.adaptive(minimum: 200, maximum: .infinity))], alignment: .center, spacing: 12) {
-                ForEach(gallery, id: \.hashValue) { image in
-                    ForEach(gallery, id: \.hashValue) { image in
+                ForEach(gallery, id: \.self) { image in
+                    ForEach(gallery, id: \.self) { image in
                         LazyImage(url: image.url) { state in
                             if let image = state.image {
                                 image
@@ -29,7 +29,6 @@ struct ModrinthGalleryView: View {
                 }
             }
         }
-        .padding(16)
     }
 }
 
