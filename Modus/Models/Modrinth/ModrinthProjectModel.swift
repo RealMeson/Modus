@@ -30,7 +30,7 @@ struct ModrinthProjectModel: Identifiable, Hashable {
     var iconUrl: URL?
     var license: ModrinthLicense?
     var versions: [ModrinthVersionModel.ID]
-    var gallery: [ModrinthImage]?
+    var gallery: [ModrinthImage]
 }
 
 extension ModrinthProjectModel: Decodable {
@@ -89,6 +89,6 @@ extension ModrinthProjectModel: Decodable {
         iconUrl = try container.decodeIfPresent(URL.self, forKey: .iconUrl)
         license = try container.decode(ModrinthLicense.self, forKey: .license)
         versions = try container.decode([String].self, forKey: .versions)
-        gallery = try container.decodeIfPresent([ModrinthImage].self, forKey: .gallery)
+        gallery = try container.decodeIfPresent([ModrinthImage].self, forKey: .gallery) ?? []
     }
 }

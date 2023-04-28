@@ -25,7 +25,6 @@ class ModrinthTeamState: ObservableObject {
             components.scheme = "https"
             components.host = "api.modrinth.com"
             components.path = "/v2/team/\(id)/members"
-            print(components.url!)
             let urlRequest = URLRequest(url: components.url!)
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
             

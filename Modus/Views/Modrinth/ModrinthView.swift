@@ -9,10 +9,12 @@ import SwiftUI
 struct ModrinthView: View {
     @State private var columnVisibility = NavigationSplitViewVisibility.all
     @State var selection: ModrinthProjectModel.ID? = nil
-
-    @EnvironmentObject var modlistState: ModlistState
+    
     @State var viewSelection = ModlistViewType.compact
     @State var search: String = ""
+    
+    @StateObject var modrinthStore = ModrinthStore()
+    @StateObject var github = GithubIssueListState()
     
     var body: some View {
         NavigationSplitView (columnVisibility: $columnVisibility) {
@@ -29,6 +31,13 @@ struct ModrinthView: View {
                 Text("Select project")
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .environmentObject(github)
+        .environmentObject(modrinthStore)
+        .environmentObject(modrinthStore.projectState)
+        .environmentObject(modrinthStore.modlistState)
+        .environmentObject(modrinthStore.versionsState)
+        .environmentObject(modrinthStore.teamState)
         /*
         .toolbar {
             ToolbarItem(id: "Download", placement: .primaryAction) {
@@ -81,8 +90,6 @@ struct ModrinthView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ModrinthView()
-                .environmentObject(ModlistState())
-                .environmentObject(ModrinthVersionsState())
         }
     }
 }
