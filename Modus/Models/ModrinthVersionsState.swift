@@ -30,7 +30,6 @@ class ModrinthVersionsState: ObservableObject {
         components.queryItems = [
             URLQueryItem(name: "ids", value: filtered.description)
         ]
-        print("\(components.url!)")
         let urlRequest = URLRequest(url: components.url!)
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
 

@@ -14,21 +14,23 @@ struct ModrinthGalleryView: View {
     let columns = [GridItem(.adaptive(minimum: 80))]
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [.init(.adaptive(minimum: 200, maximum: .infinity))], alignment: .center, spacing: 12) {
-                ForEach(gallery, id: \.self) { image in
-                    ForEach(gallery, id: \.self) { image in
-                        LazyImage(url: image.url) { state in
-                            if let image = state.image {
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            }
+        LazyVGrid(columns: [.init(.adaptive(minimum: 200, maximum: .infinity), spacing: 24)], spacing: 24) {
+            ForEach(gallery, id: \.self) { image in
+                GeometryReader { geo in
+                    LazyImage(url: image.url) { state in
+                        if let image = state.image {
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: geo.size.width, height: 150)
+                                .clipped()
                         }
                     }
                 }
+                .frame(height: 150)
             }
         }
+        .animation(.linear)
     }
 }
 

@@ -63,7 +63,6 @@ class ModrinthAPIService {
         components.queryItems = [
             URLQueryItem(name: "ids", value: ids.description)
         ]
-        print("\(components.url!)")
         let request = URLRequest(url: components.url!, timeoutInterval: 10)
         return URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MarkdownUI
+import NukeUI
 
 enum Selection: String, CaseIterable, Identifiable {
     case description, gallery, issues
@@ -39,6 +40,22 @@ extension Selection {
     }
 }
 
+struct EffectView: NSViewRepresentable {
+    @State var material: NSVisualEffectView.Material = .headerView
+    @State var blendingMode: NSVisualEffectView.BlendingMode = .withinWindow
+
+    func makeNSView(context: Context) -> NSVisualEffectView {
+        let view = NSVisualEffectView()
+        view.material = material
+        view.blendingMode = blendingMode
+        return view
+    }
+    
+    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {
+        nsView.material = material
+        nsView.blendingMode = blendingMode
+    }
+}
 
 struct ModrinthDetailsView: View {
     let id: ModrinthProjectModel.ID
@@ -47,51 +64,72 @@ struct ModrinthDetailsView: View {
     @EnvironmentObject var projectState: ModrinthProjectState
 
     var body: some View {
-        VStack {
+        ScrollView {
             if let project = projectState.project {
-                ModTitleCardView(id: project.id, title: project.title, teamId: project.team, categories: project.categories)
-                Picker("Section", selection: $selection) {
-                    Label(Selection.description.label, systemImage: Selection.description.icon).tag(Selection.description)
-                    if let gallery = project.gallery, !gallery.isEmpty {
-                        Label(Selection.gallery.label, systemImage: Selection.gallery.icon).tag(Selection.gallery)
-                    }
-                    if project.issuesUrl != nil {
-                        Label(Selection.issues.label, systemImage: Selection.issues.icon).tag(Selection.issues)
+                StickyHeader {
+                    if !project.gallery.isEmpty {
+                        LazyImage(url: project.gallery[0].url) { state in
+                            if let image = state.image {
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            }
+                        }
+                    } else {
+                        Image("MinecraftDirtTexture")
+                            .resizable(resizingMode: .tile)
                     }
                 }
-                .padding(.vertical, 4)
-                .labelsHidden()
-                .pickerStyle(.segmented)
-                switch selection {
-                case .description:
-                    VStack (alignment: .leading) {
-                        //let image = project.gallery != nil && project.gallery?.count != 0 ? project.gallery![0].url : nil
-                        //ModTitleCardView(id: project.id, title: project.title, teamId: project.team, categories: project.categories + project.additionalCategories, image: image)
-                        ScrollView {
-                            Markdown(project.body)
-                                .padding(.horizontal, 24)
+                LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
+                    Section {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Picker("Section", selection: $selection) {
+                                Label(Selection.description.label, systemImage: Selection.description.icon).tag(Selection.description)
+                                if !project.gallery.isEmpty {
+                                    Label(Selection.gallery.label, systemImage: Selection.gallery.icon).tag(Selection.gallery)
+                                }
+                                if project.issuesUrl != nil {
+                                    Label(Selection.issues.label, systemImage: Selection.issues.icon).tag(Selection.issues)
+                                }
+                            }
+                            .labelsHidden()
+                            .pickerStyle(.segmented)
+
+                            switch selection {
+                            case .description:
+                                Markdown(project.body)
+                            case .gallery:
+                                ModrinthGalleryView(gallery: project.gallery)
+                            case .issues:
+                                if let issues = project.issuesUrl {
+                                    switch issues.host() {
+                                    case "github.com":
+                                        GitHubIssuesView(owner: issues.pathComponents[1], name: issues.pathComponents[2])
+                                    default:
+                                        Text("Issues source not supported")
+                                    }
+                                }
+                            }
                         }
-                    }
-                case .gallery:
-                    if let gallery = project.gallery {
-                        ModrinthGalleryView(gallery: gallery)
-                    }
-                case .issues:
-                    if let issues = project.issuesUrl {
-                        switch issues.host() {
-                        case "github.com":
-                            GitHubIssuesView(owner: issues.pathComponents[1], name: issues.pathComponents[2])
-                        default:
-                            Text("Issues source not supported")
+                        .padding(.horizontal, 32)
+                        .padding(.bottom, 32)
+                    } header: {
+                        Group {
+                            HStack (alignment: .lastTextBaseline, spacing: 12) {
+                                Link(project.title, destination: URL(string: "https://modrinth.com/mod/\(id)")!)
+                                    .font(.largeTitle)
+                                    .foregroundColor(.primary)
+                                TeamView(id: project.team)
+                                Spacer()
+                            }
+                            .padding(.horizontal, 32)
+                            .padding(.vertical, 16)
                         }
+                        .background(EffectView(material: .sheet))
                     }
                 }
             }
         }
-        .onAppear {
-            print("hellO")
-        }
-        .padding(12)
         .task(id: id) {
             try? await projectState.getProject(id: id)
             selection = .description

@@ -7,17 +7,12 @@
 
 import Foundation
 
-struct Payload: Codable {
-    var variables: String = "{}"
-    var query: String
-}
-
 @MainActor
-class GithubIssuesStore: ObservableObject {
-    @Published var issues: [GitHubIssueModel]? = nil
+class GithubIssueListState: ObservableObject {
+    @Published var issues: [GitHubIssueItem]? = nil
     
     private struct IssuesResponse: Decodable {
-        var issues: [GitHubIssueModel]
+        var issues: [GitHubIssueItem]
         
         enum CodingKeys: String, CodingKey {
             case data
@@ -27,10 +22,6 @@ class GithubIssuesStore: ObservableObject {
 
                 enum IssuesKeys: String, CodingKey {
                     case issues
-                    
-                    enum EdgesKeys: String, CodingKey {
-                        case edges
-                    }
                 }
             }
         }
@@ -40,8 +31,8 @@ class GithubIssuesStore: ObservableObject {
             
             let repoContainer = try container.nestedContainer(keyedBy: CodingKeys.RepositoryKeys.self, forKey: .data)
             let issuesContainer = try repoContainer.nestedContainer(keyedBy: CodingKeys.RepositoryKeys.IssuesKeys.self, forKey: .repository)
-            let edgesContainer = try issuesContainer.nestedContainer(keyedBy: CodingKeys.RepositoryKeys.IssuesKeys.EdgesKeys.self, forKey: .issues)
-            issues = try edgesContainer.decode([GitHubIssueModel].self, forKey: .edges)
+            let edges = try issuesContainer.decode(Edges<GitHubIssueItem>.self, forKey: .issues)
+            issues = edges.values
         }
     }
 
@@ -54,7 +45,7 @@ class GithubIssuesStore: ObservableObject {
         var request = URLRequest(url: components.url!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer {BEARER_TOKEN}w", forHTTPHeaderField: "Authorization")
         let query = """
         {
           repository(owner: "\(owner)", name: "\(name)") {
@@ -63,7 +54,9 @@ class GithubIssuesStore: ObservableObject {
                 node {
                   id
                   title
+                  number
                   stateReason
+                  updatedAt
                   labels(first: 10) {
                     edges {
                       node {
@@ -72,6 +65,13 @@ class GithubIssuesStore: ObservableObject {
                         name
                       }
                     }
+                  }
+                  author {
+                    login
+                    avatarUrl
+                  }
+                  comments {
+                    totalCount
                   }
                 }
               }

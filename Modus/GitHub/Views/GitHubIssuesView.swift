@@ -11,31 +11,25 @@ struct GitHubIssuesView: View {
     let owner: String
     let name: String
 
-    @StateObject var issuesState = GithubIssuesStore()
+    @EnvironmentObject var issuesState: GithubIssueListState
 
     var body: some View {
-        VStack {
+        VStack(spacing: 12) {
             if let issues = issuesState.issues {
-                List {
-                    ForEach(issues, id: \.self) { issue in
-                        HStack {
-                            Label("Status", systemImage: issue.state.icon)
-                                .labelStyle(.iconOnly)
-                            Text("\(issue.title)")
-                                .font(.headline)
-                            ForEach(issue.labels, id: \.name) { label in
-                                GitHubLabelView(label: label)
-                            }
-                        }
-                    }
+                ForEach(issues, id: \.self) { issue in
+                    GitHubIssueItemView(issue: issue)
                 }
             } else {
-                ProgressView()
+                VStack(alignment: .center) {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-        .frame(minWidth: 500, maxWidth: .infinity, minHeight: 100, maxHeight: .infinity)
         .task {
-            try! await issuesState.getIssuesFromRepository(owner: owner, name: name)
+            try? await issuesState.getIssuesFromRepository(owner: owner, name: name)
         }
     }
 }
@@ -43,5 +37,6 @@ struct GitHubIssuesView: View {
 struct GitHubIssuesView_Previews: PreviewProvider {
     static var previews: some View {
         GitHubIssuesView(owner: "IrisShaders", name: "Iris")
+            .environmentObject(GithubIssueListState())
     }
 }
